@@ -1,0 +1,10 @@
+package com.bohemme.citas.repository;
+
+import com.bohemme.citas.model.Servicio;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ServicioRepository extends JpaRepository<Servicio, Long> {
+    List<Servicio> findByActivoTrue();
+}
