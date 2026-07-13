@@ -1,17 +1,11 @@
 package com.bohemme.citas.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "citas")
-@Getter
-@Setter
-@NoArgsConstructor
 public class Cita {
 
     @Id
@@ -37,10 +31,34 @@ public class Cita {
 
     private String notas;
 
+    public Cita() {
+    }
+
     public Cita(Cliente cliente, Servicio servicio, LocalDateTime fechaHoraInicio) {
         this.cliente = cliente;
         this.servicio = servicio;
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraFin = fechaHoraInicio.plusMinutes(servicio.getDuracionMinutos());
     }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public Cliente getCliente() { return cliente; }
+    public void setCliente(Cliente cliente) { this.cliente = cliente; }
+
+    public Servicio getServicio() { return servicio; }
+    public void setServicio(Servicio servicio) { this.servicio = servicio; }
+
+    public LocalDateTime getFechaHoraInicio() { return fechaHoraInicio; }
+    public void setFechaHoraInicio(LocalDateTime fechaHoraInicio) { this.fechaHoraInicio = fechaHoraInicio; }
+
+    public LocalDateTime getFechaHoraFin() { return fechaHoraFin; }
+    public void setFechaHoraFin(LocalDateTime fechaHoraFin) { this.fechaHoraFin = fechaHoraFin; }
+
+    public EstadoCita getEstado() { return estado; }
+    public void setEstado(EstadoCita estado) { this.estado = estado; }
+
+    public String getNotas() { return notas; }
+    public void setNotas(String notas) { this.notas = notas; }
 }

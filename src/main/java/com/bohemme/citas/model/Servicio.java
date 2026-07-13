@@ -3,17 +3,11 @@ package com.bohemme.citas.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "servicios")
-@Getter
-@Setter
-@NoArgsConstructor
 public class Servicio {
 
     @Id
@@ -21,16 +15,19 @@ public class Servicio {
     private Long id;
 
     @NotBlank(message = "El nombre del servicio es obligatorio")
-    private String nombre; // Ej: "Asesoramiento personalizado", "Prueba de anillo"
+    private String nombre;
 
     private String descripcion;
 
     @Positive(message = "La duración debe ser positiva")
-    private Integer duracionMinutos; // Ej: 30, 45, 60
+    private Integer duracionMinutos;
 
     private BigDecimal precio;
 
     private boolean activo = true;
+
+    public Servicio() {
+    }
 
     public Servicio(String nombre, String descripcion, Integer duracionMinutos, BigDecimal precio) {
         this.nombre = nombre;
@@ -38,4 +35,22 @@ public class Servicio {
         this.duracionMinutos = duracionMinutos;
         this.precio = precio;
     }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+
+    public Integer getDuracionMinutos() { return duracionMinutos; }
+    public void setDuracionMinutos(Integer duracionMinutos) { this.duracionMinutos = duracionMinutos; }
+
+    public BigDecimal getPrecio() { return precio; }
+    public void setPrecio(BigDecimal precio) { this.precio = precio; }
+
+    public boolean isActivo() { return activo; }
+    public void setActivo(boolean activo) { this.activo = activo; }
 }
