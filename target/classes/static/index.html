@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAVI'S Sport</title>
+<title>Bohemme Sport</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -233,7 +233,7 @@
 <div class="wrap">
 
   <header>
-    <div class="brand">JAVI'S <span>SPORT</span></div>
+    <div class="brand">BOHEMME <span>SPORT</span></div>
     <div class="tabs">
       <button class="tab-btn active" data-view="tienda">Tienda</button>
       <button class="tab-btn" data-view="reservar">Reservar</button>
@@ -408,7 +408,13 @@
 </div>
 
 <script>
-const API_BASE = 'https://verbose-cod-g47jq5rpqppw2rx-8080.app.github.dev';
+  // Si este archivo lo sirve el propio backend de Spring Boot (recomendado), detecta
+  // automáticamente su propia URL (funciona igual en local, en Codespaces, o donde sea).
+  // Si lo abres como archivo suelto (file://), usa localhost:8080 como valor por defecto.
+  const API_BASE = (location.protocol === 'http:' || location.protocol === 'https:')
+    ? location.origin
+    : 'http://localhost:8080';
+
   /* ============ ICONOS SVG POR TIPO DE PRENDA ============ */
   const ICONOS = {
     camiseta: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 4 L4 7 L6 10 L8 8.5 V20 H16 V8.5 L18 10 L20 7 L16 4 C16 5.5 14.5 6.5 12 6.5 C9.5 6.5 8 5.5 8 4 Z"/></svg>`,
