@@ -1,7 +1,7 @@
-package com.bohemme.citas.service;
+package com.JAVI.citas.service;
 
-import com.bohemme.citas.model.Producto;
-import com.bohemme.citas.repository.ProductoRepository;
+import com.JAVI.citas.model.Producto;
+import com.JAVI.citas.repository.ProductoRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

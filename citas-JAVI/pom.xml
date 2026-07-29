@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.bohemme</groupId>   
+    <groupId>com.JAVI</groupId>   
     <artifactId>citas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name><citas-JAVI></citas-JAVI></name>

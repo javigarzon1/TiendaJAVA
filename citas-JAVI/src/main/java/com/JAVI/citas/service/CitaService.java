@@ -1,16 +1,16 @@
-package com.bohemme.citas.service;
+package com.JAVI.citas.service;
 
-import com.bohemme.citas.dto.CitaRequest;
-import com.bohemme.citas.dto.CitaResponse;
-import com.bohemme.citas.exception.HorarioNoDisponibleException;
-import com.bohemme.citas.exception.RecursoNoEncontradoException;
-import com.bohemme.citas.model.Cita;
-import com.bohemme.citas.model.Cliente;
-import com.bohemme.citas.model.EstadoCita;
-import com.bohemme.citas.model.Servicio;
-import com.bohemme.citas.repository.CitaRepository;
-import com.bohemme.citas.repository.ClienteRepository;
-import com.bohemme.citas.repository.ServicioRepository;
+import com.JAVI.citas.dto.CitaRequest;
+import com.JAVI.citas.dto.CitaResponse;
+import com.JAVI.citas.exception.HorarioNoDisponibleException;
+import com.JAVI.citas.exception.RecursoNoEncontradoException;
+import com.JAVI.citas.model.Cita;
+import com.JAVI.citas.model.Cliente;
+import com.JAVI.citas.model.EstadoCita;
+import com.JAVI.citas.model.Servicio;
+import com.JAVI.citas.repository.CitaRepository;
+import com.JAVI.citas.repository.ClienteRepository;
+import com.JAVI.citas.repository.ServicioRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,13 +1,14 @@
-package com.bohemme.citas.service;
+package com.JAVI.citas.service;
 
-import com.bohemme.citas.model.Cita;
+import java.time.format.DateTimeFormatter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-import java.time.format.DateTimeFormatter;
+import com.bohemme.citas.model.Cita;
 
 /**
  * Centraliza el envío de notificaciones sobre citas.
