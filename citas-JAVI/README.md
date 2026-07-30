@@ -1,4 +1,4 @@
-# Sistema de Reservas de Citas — Bohemme
+# Sistema de Reservas de Citas — Javi
 
 API REST en Spring Boot para gestionar reservas de citas (asesoramiento, pruebas de anillo,
 personalización de piezas, reparaciones...), pensada como alternativa/complemento a la reserva
@@ -64,7 +64,7 @@ curl "http://localhost:8080/api/citas?desde=2026-07-14T00:00:00&hasta=2026-07-20
 ## Estructura del proyecto
 
 ```
-src/main/java/com/bohemme/citas/
+src/main/java/com/JAVI/citas/
 ├── CitasApplication.java       # Punto de entrada
 ├── model/                      # Entidades JPA (Cliente, Servicio, Cita, EstadoCita)
 ├── repository/                 # Acceso a datos (incluye la consulta de solapamiento)
