@@ -1,23 +1,26 @@
-package com.bohemme.citas;
-
-import com.bohemme.citas.dto.CitaRequest;
-import com.bohemme.citas.exception.HorarioNoDisponibleException;
-import com.bohemme.citas.model.Servicio;
-import com.bohemme.citas.repository.CitaRepository;
-import com.bohemme.citas.repository.ClienteRepository;
-import com.bohemme.citas.repository.ServicioRepository;
-import com.bohemme.citas.service.CitaService;
-import com.bohemme.citas.service.NotificacionService;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+package com.JAVI.citas;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import com.JAVI.citas.dto.CitaRequest;
+import com.JAVI.citas.exception.HorarioNoDisponibleException;
+import com.JAVI.citas.model.Servicio;
+import com.JAVI.citas.repository.CitaRepository;
+import com.JAVI.citas.repository.ClienteRepository;
+import com.JAVI.citas.repository.ServicioRepository;
+import com.JAVI.citas.service.CitaService;
+import com.JAVI.citas.service.NotificacionService;
 
 class CitaServiceTest {
 
