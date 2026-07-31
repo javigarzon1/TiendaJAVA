@@ -14,7 +14,7 @@
     <groupId>com.JAVI</groupId>   
     <artifactId>citas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name><citas-JAVI></citas-JAVI></name>
+    <name>citas-JAVI</name>
     <description>Sistema de reservas de citas para JAVI</description>
 
     <properties>
@@ -60,7 +60,54 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
-        <!-- Testing -->
+      <!-- Testing -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+    <exclusions>
+        <exclusion>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+
+<!-- Mockito compatible con Java 25 -->
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>5.18.0</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-junit-jupiter</artifactId>
+    <version>5.18.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- Byte Buddy actualizado -->
+<dependency>
+    <groupId>net.bytebuddy</groupId>
+    <artifactId>byte-buddy</artifactId>
+    <version>1.17.8</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>net.bytebuddy</groupId>
+    <artifactId>byte-buddy-agent</artifactId>
+    <version>1.17.8</version>
+    <scope>test</scope>
+</dependency>
+      
+        <!-- Testing 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -76,5 +123,5 @@
             </plugin>
         </plugins>
     </build>
-
+-->
 </project>
