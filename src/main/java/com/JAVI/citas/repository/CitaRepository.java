@@ -1,13 +1,14 @@
 package com.JAVI.citas.repository;
 
-import com.JAVI.citas.model.Cita;
-import com.JAVI.citas.model.EstadoCita;
+import java.time.LocalDateTime;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import java.time.LocalDateTime;
-import java.util.List;
+import com.JAVI.citas.model.Cita;
+import com.JAVI.citas.model.EstadoCita;
 
 public interface CitaRepository extends JpaRepository<Cita, Long> {
 
@@ -24,7 +25,7 @@ public interface CitaRepository extends JpaRepository<Cita, Long> {
      */
     @Query("""
         SELECT COUNT(c) > 0 FROM Cita c
-        WHERE c.estado IN (com.JAVI.citas.model.EstadoCita.PENDIENTE, com.bohemme.citas.model.EstadoCita.CONFIRMADA)
+        WHERE c.estado IN (com.JAVI.citas.model.EstadoCita.PENDIENTE, com.JAVI.citas.model.EstadoCita.CONFIRMADA)
         AND c.fechaHoraInicio < :fin
         AND c.fechaHoraFin > :inicio
         """)
